@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.container .cart {
+    min-width:350px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+}
+.container .cart .layer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#03a9f4, #e91ee3);
+    transition: 200ms;
+    z-index: 1;
+}
+.container .cart:hover .layer {
+    top: 0;
+   
+}
+.container .cart .content {
+   z-index: 2;
+    position: relative;
+}
+.container .cart .content .image{
+    display: flex;
+    justify-content: center
+ }
+img {
+    width: 100px;
+    height:100px;
+}
